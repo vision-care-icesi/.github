@@ -1,0 +1,51 @@
+name: Historia de usuario
+description: Nueva historia de usuario para el Product Backlog
+title: "[HU] "
+labels: ["type/story", "status/needs-refinement"]
+body:
+  - type: textarea
+    id: historia
+    attributes:
+      label: Historia de usuario
+      description: El actor debe ser una persona concreta, nunca "usuario".
+      value: |
+        Como <actor concreto>,
+        quiero <lo que necesita hacer>,
+        para <el valor que obtiene>.
+    validations: { required: true }
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptacion
+      description: Uno por linea. Cada uno debe poder comprobarse con una accion concreta.
+      value: |
+        - [ ]
+    validations: { required: true }
+  - type: dropdown
+    id: moscow
+    attributes:
+      label: Prioridad MoSCoW
+      options: ["Must have", "Should have", "Could have", "Won't have"]
+    validations: { required: true }
+  - type: dropdown
+    id: size
+    attributes:
+      label: Estimacion
+      description: Una historia de 13 puntos no entra a un sprint. Se divide en refinamiento.
+      options: ["XS · 1pt", "S · 2pt", "M · 3pt", "L · 5pt", "XL · 8pt", "XXL · 13pt"]
+    validations: { required: true }
+  - type: textarea
+    id: dependencias
+    attributes:
+      label: Dependencias
+      description: Issues que deben cerrarse antes que esta.
+  - type: checkboxes
+    id: dor
+    attributes:
+      label: Definition of Ready
+      options:
+        - label: Tiene actor, necesidad y valor explicitos
+        - label: Los criterios de aceptacion son verificables
+        - label: Esta estimada y no supera 8 puntos
+        - label: Tiene prioridad MoSCoW
+        - label: Sus dependencias estan identificadas
