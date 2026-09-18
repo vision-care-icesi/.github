@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentación y backlog del proyecto
+    url: https://github.com/vision-care-icesi/vision-care
+    about: Arquitectura, modelo de datos, contratos de API y tablero del proyecto.
